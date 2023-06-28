@@ -1,0 +1,21 @@
+.container {
+  width: 1000px;
+  height: 700px;
+  margin: 0 auto;
+  background-color: #fcfdf0;
+}
+
+.head {
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 50px;
+}
+.list {
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #cecece;
+  font-weight: bold;
+  font-size: 20px;
+  padding-bottom: 10px;
+}
