@@ -1,10 +1,17 @@
 import React from "react";
 
-const Button = () => {
+const Button = ({ onRemove, item }) => {
+  const btnStyle = {
+    width: "50px",
+    height: "30px",
+  };
+
   return (
     <div>
-      <button>수정</button>
-      <button>삭제</button>
+      <button style={btnStyle}>수정</button>
+      <button onClick={() => onRemove(item.id)} style={btnStyle}>
+        삭제
+      </button>
     </div>
   );
 };

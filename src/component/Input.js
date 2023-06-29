@@ -1,37 +1,7 @@
-import React, { useEffect, useState } from "react";
-
-const Input = () => {
-  const [dataValue, setDataValue] = useState({
-    date: "",
-    text: "",
-  });
-
-  const [items, setItems] = useState([]);
+import React from "react";
+const Input = ({ todoData, dataSet, dataValue }) => {
   const { date, text } = dataValue;
 
-  const todoData = (e) => {
-    const { value, name } = e.target;
-    setDataValue({
-      ...dataValue, // 기존 dataValue 객체를 복사 한다.
-      [name]: value, // name 이라는 키를 가진 값을 value로 설정한다
-    });
-  };
-
-  const dataSet = () => {
-    const dataValues = {
-      date,
-      text,
-    };
-    setItems(items.concat(dataValues));
-    setDataValue({
-      date: "",
-      text: "",
-    });
-    console.log(dataValue);
-  };
-  useEffect(() => {
-    console.log(items);
-  }, [items]);
   const inputStyle = {
     width: "300px",
     height: "30px",
